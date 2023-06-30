@@ -109,12 +109,12 @@ Redis cluster
       ```bash
       psql -U project -f install.sql
       ```
-9. Test Application without Elastic Cache:
+8. Test Application without Elastic Cache:
 -- Open a browser tab to 127.0.0.1:5000 & check load times 
    ```bash
-    	python3 app.py
-    	```
-10. Test Application with Elastic Cache:
+   python3 app.py
+   ```
+9. Test Application with Elastic Cache:
 -- Modify the database init file and add the "Redis" field
 -- Verify we can connect to the Redis cluster
 -- Modify App fetch settings (See 'def fetch(sql).py' file)
