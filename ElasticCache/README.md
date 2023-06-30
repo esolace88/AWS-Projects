@@ -113,27 +113,24 @@ Redis cluster
 9. Test Application
 	a. Test without Elastic Cache: run the app via python3
    		```bash
-      		python3 app.py
-      		```
-   
-		1. Open Webpage to see Load Time Duration
+    		python3 app.py
+    		```
+    		1. Open Webpage to see Load Time Duration
    
 	b. Test with Elastic Cache:
 		1. Modify the database init file and add the "Redis" field
-   		```bash
- 		[redis]
-		redis_url=redis://<enter redis enpoint>
-      		```
-   
-		2. Veiry we can connect to the Redis cluster
-      		```bash
-		python3
-   		import redis
-		cache = redis.Redis.from_url('redis://<paste end point>')
-		cache.ping() 
-      		```
-   
-		3. Modify App fetch settings (See 'def fetch(sql).py' file)
+   			```bash
+ 			[redis]
+			redis_url=redis://<enter redis enpoint>
+      			```
+   		2. Veiry we can connect to the Redis cluster
+      			```bash
+			python3
+   			import redis
+			cache = redis.Redis.from_url('redis://<paste end point>')
+			cache.ping() 
+      			```
+   		3. Modify App fetch settings (See 'def fetch(sql).py' file)
 		4. Run the app & view the results
 
 
