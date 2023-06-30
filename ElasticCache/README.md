@@ -63,7 +63,7 @@ Redis cluster
 	f. Take note of the Endpoint
 
 7. Configure Application -
-  a. SSH into Sever
+	a. SSH into Sever
       ```bash
       chmod 400 </path/to/key>
       ssh -L 5000:127.0.0.1:5000 ec2-user@<publicIP> -i <key>
@@ -112,24 +112,25 @@ Redis cluster
       
 9. Test Application
 	a. Test without Elastic Cache: run the app via python3
+		1. Open Webpage to see the Load Time Duration
+   	b. Test with Elastic Cache
+    		1. Modify the database init file and add the "Redis" field
+    		2. Verify we can connect to the Redis cluster
+   		3. Modify App fetch settings (See 'def fetch(sql).py' file)
+	4. Run the app & view the results
    	```bash
     	python3 app.py
     	```
-Open Webpage to see Load Time Duration
-   	b. Test with Elastic Cache:
-   	1. Modify the database init file and add the "Redis" field
-   	```bash
+     
+    ```bash
 	[redis]
 	redis_url=redis://<enter redis enpoint>
       	```
-   	2. Verify we can connect to the Redis cluster
+ 
       	```bash
 	python3
    	import redis
 	cache = redis.Redis.from_url('redis://<paste end point>')
 	cache.ping() 
    	```
-   	3. Modify App fetch settings (See 'def fetch(sql).py' file)
-	4. Run the app & view the results
-
 
