@@ -115,6 +115,7 @@ Redis cluster
    		```bash
       		python3 app.py
       		```
+   
 		1. Open Webpage to see Load Time Duration
    
 	b. Test with Elastic Cache:
@@ -123,6 +124,7 @@ Redis cluster
  		[redis]
 		redis_url=redis://<enter redis enpoint>
       		```
+   
 		2. Veiry we can connect to the Redis cluster
       		```bash
 		python3
@@ -130,6 +132,7 @@ Redis cluster
 		cache = redis.Redis.from_url('redis://<paste end point>')
 		cache.ping() 
       		```
+   
 		3. Modify App fetch settings (See 'def fetch(sql).py' file)
 		4. Run the app & view the results
 
