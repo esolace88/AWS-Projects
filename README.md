@@ -10,6 +10,8 @@ Currently, this repository focuses on two key areas of AWS:
 
 2. **CloudFormation:** Here, you'll find examples demonstrating how to use AWS CloudFormation. CloudFormation provides a common language for you to describe and provision all the infrastructure resources in your cloud environment. It allows you to use AWS and third-party application resources, create and manage a collection of related AWS resources, and provision and update them in an orderly and predictable way.
 
+3. **EventBus & Lambda:** This project focuses on how to leverage the EventBus and Lambda services in AWS. It demonstrates how to set up a serverless event-driven architecture using AWS Lambda functions that respond to events sent to an Amazon EventBridge (formerly CloudWatch Events) EventBus.
+
 Each project resides in its respective folder and includes a detailed README file explaining the project's specifics, including the problem statement, approach, and results.
 
 ## Getting Started
