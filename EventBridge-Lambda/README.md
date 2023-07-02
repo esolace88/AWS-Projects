@@ -31,6 +31,15 @@ Note your IDE must have the following packages installed to function:
 	a. Enter Name
 	b. Runtime = Python
 5. Accept Defaults and Create
+6. Modify the Lambda Function code to include the following:
+      ```bash
+	import json
+
+	def lambda_handle(event, context):
+    	print("In Lambda")
+    	print(event)
+ 
+      ```
 
 **Creating Event Bus**
 1. Navigate to Amazon EventBridge
