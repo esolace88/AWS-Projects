@@ -1,38 +1,74 @@
-# AWS Projects
+# AWS EventBus & Lambda Project
 
-Welcome to my AWS Projects repository! This repository serves as a collection of practical projects demonstrating the use of various AWS (Amazon Web Services) Cloud Services. The primary aim is to provide hands-on examples for deploying and managing applications in the AWS Cloud.
-
-## Repository Contents
-
-Currently, this repository focuses on two key areas of AWS:
-
-1. **Elastic Cache:** This section showcases how to deploy a service that utilizes AWS Elastic Cache. Elastic Cache is a web service that makes it easy to deploy, operate, and scale an in-memory cache in the cloud. The service improves the performance of web applications by allowing you to retrieve information from fast, managed, in-memory caches, instead of relying solely on slower disk-based databases.
-
-2. **CloudFormation:** Here, you'll find examples demonstrating how to use AWS CloudFormation. CloudFormation provides a common language for you to describe and provision all the infrastructure resources in your cloud environment. It allows you to use AWS and third-party application resources, create and manage a collection of related AWS resources, and provision and update them in an orderly and predictable way.
-
-Each project resides in its respective folder and includes a detailed README file explaining the project's specifics, including the problem statement, approach, and results.
+Welcome to the EventBus and Lambda project! This is a simple project that leverages AWS EventBus and Lambda to create an Event trigger System, which can help application to decuple to create alternative tasks. (See Demo folder for a quick view of the end product)
 
 ## Getting Started
 
-To start exploring these projects, you need to clone this repository to your local machine. Here's how to do it:
+To get started, you will need an AWS account to create an IAM User, EventBus w/ Rules, and Lambda Services. You will also need access to an IDE, to run the application code. 
 
-```bash
-git clone https://github.com/esolace88/AWS-Projects.git
-cd AWS-Projects
-```
+Note your IDE must have the following packages installed to function:
 
-After cloning, navigate to the individual project folder and follow the specific setup instructions detailed in each project's README file.
+	re, os, json, boto3, datetime, uuid, datetime, json
 
-## Prerequisites
+-------------
 
-These projects require an active AWS account and basic knowledge of AWS services. Depending on the project, you may need to install the AWS CLI and configure it with your AWS account details. Detailed prerequisites and setup instructions are provided within each project's folder.
+## Step by Step 
 
-## Contributions
+**Creating IAM User**
+1. Login into AWS
+2. Create a user w/ no groups or permission
+3. Once Created, Establish Access Keys
+	Users > User Created > Security Credentials > Access Keys > Local Code
+	**Note: This is not a recommended method, this method was used as proof of concept**
+4. Copy the Secret Information and save it for later use
+5. Then add the following policy to the user: AmazonEventBridgeFull Access
 
-Contributions, bug reports, and improvements are welcomed. Feel free to open an issue or create a pull request if you want to contribute.
+**Creating a Lambda Service**
+1. Navigate to Lambda
+2. Create Lambda Service
+3. Select Author From Sracth
+4. Under Basic Informaiton 
+	a. Enter Name
+	b. Runtime = Python
+5. Accept Defaults and Create
 
-## Contact
+**Creating Event Bus**
+1. Navigate to Amazon EventBridge
+2. Select "Event Buses"
+3. Name the Bus > Create
 
-Should you wish to get in touch, feel free to reach out to me through GitHub or via [email](mailto:esolace88@gmail.com).
+**Creating Bus Rules**
+1. Select Rules from the left navigation page
+2. In the Event Bus field select your newly created bus
+3. Create New Rule
+4. Name the rule
+5. In Step 2 "Build event Pattern" scroll to Creating Method and select "Custom Pattern"
+      ```bash
+    {
+    "detail":{
+        "status":["new order"]
+    }
 
-Enjoy exploring these AWS projects, and happy cloud computing!
+    }  
+      ```
+6. In Event Pattern Section enter the JSON code 
+7. In Step 3, "Select targets" In Trigger Section add Lambda > select previously created function.
+
+**Modifying Code**
+1. Open EventBus file and modify the following sections with your service information. 
+      ```bash
+        # Enter Your User Key Access and Event Bus ARN
+        self.AWS_ACCESS_KEY = "xxxxx"
+        self.AWS_SECRET_KEY = "xxxxx"
+        self.AWS_REGION_NAME = "us-east-1"
+        self.EventBusName = 'xxxx'
+      ```
+
+
+**Executing Code and Reviewing Results**
+1. Run the Code within an IDE
+2. Navigate to the Lambda Funciton > Monitor > View CloudWatch Logs
+3. View the Latest Log and Review the Message
+
+
+

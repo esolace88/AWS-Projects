@@ -1,0 +1,5 @@
+import json
+
+def lambda_handle(event, context):
+    print("In Lambda")
+    print(event)
