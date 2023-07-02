@@ -1,6 +1,6 @@
 # AWS Cloud Formation (IaC)
 
-Welcome to the Cloud Formation Project! This is a simple project that leverages AWS native IaC tool CloudFormation to rapidly build AWS Services via code in yml or json format. This project will cover how to deploy premade files to create AWS resources. 
+Welcome to the Cloud Formation Project! This is a simple project that leverages AWS native IaC tool CloudFormation to rapidly build AWS Services via code in yml or json format. This project will cover how to deploy premade files to create AWS resources. (See the Demo folder for a quick deployment of the project)
 
 ## Getting Started
 
