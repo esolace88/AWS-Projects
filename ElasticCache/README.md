@@ -46,7 +46,6 @@ Redis cluster
 
 4. Create a Security Group for Cache Service
 	a. Inbound Rule, Custom TCP 6379, Source = Application Security Group
-      <Add Picture>
       
 5. Create ElasticCache Server 
 	a. Redis Cluster & Name
