@@ -21,7 +21,7 @@ To get started, you will need an AWS account to gain access to AWS CloudFormatio
 3. Create a "New Stack"
 	Create Stack > With New Resources
 4. Select Template is Ready > Upload a Template File
-	<!--![I am Cloud Computing Engineer.] (<Enter URL of Pic>)-->
+https://github.com/esolace88/AWS-Projects/blob/main/CloudFormation/img/InitialCreation.png
 5. Name the Stack in Step 2 "Specify Stack Details" > Stack Name
 6. Accept the Defaults and hit Submit on the last page. 
 7. Wait for the task to complete and review services
