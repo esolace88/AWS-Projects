@@ -31,5 +31,6 @@ To get started, you will need an AWS account to gain access to AWS CloudFormatio
 1. Select Stack to Update
 2. Select Stack Actions > Create change for current Stack 
 3. Replace Current Template > Upload Template
-4. Accept defaults and Submit
-5. Review Changes
+![alt text](https://github.com/esolace88/AWS-Projects/blob/main/CloudFormation/img/UpdateStack.png)
+4. Accept defaults and Submit 
+5. Wait for page to loag, Then Select Execute Change Set
