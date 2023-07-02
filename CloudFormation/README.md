@@ -1,6 +1,6 @@
 # AWS Cloud Formation (IaC)
 
-Welcome to the Cloud Formaiton Project! This is a simple project that leverages AWS native IaC tool CloudFormation to rapidly build AWS Services via code in yml or json format. This project will cover how to deploy premade files to create AWS resources. 
+Welcome to the Cloud Formation Project! This is a simple project that leverages AWS native IaC tool CloudFormation to rapidly build AWS Services via code in yml or json format. This project will cover how to deploy premade files to create AWS resources. 
 
 ## Getting Started
 
@@ -15,7 +15,7 @@ To get started, you will need an AWS account to gain access to AWS CloudFormatio
 
 ## Step by Step 
 
-### Intial Creation
+### Initial Creation
 1. Log Into your AWS account
 2. Navigate to CloudFormation
 3. Create a "New Stack"
@@ -29,8 +29,8 @@ To get started, you will need an AWS account to gain access to AWS CloudFormatio
 ### Update to Stacks
 
 1. Select Stack to Update
-2. Select Stack Actions > Create change for current Stack 
+2. Select Stack Actions > Create change for the current Stack 
 3. Replace Current Template > Upload Template
 ![alt text](https://github.com/esolace88/AWS-Projects/blob/main/CloudFormation/img/UpdateStack.png)
 4. Accept defaults and Submit 
-5. Wait for page to loag, Then Select Execute Change Set
+5. Wait for the page to load, Then Select Execute Change Set
