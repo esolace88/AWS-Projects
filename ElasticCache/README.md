@@ -1,6 +1,6 @@
 # AWS Elastic Cache Project
 
-Welcome to the Elastic Cache project! This is a simple project that leverages AWS Elastic Cache to improve an application's performance. 
+Welcome to the Elastic Cache project! This is a simple project that leverages AWS Elastic Cache to improve an application's performance. (See Demo folder for a quick view of the end product)
 
 ## Getting Started
 
